@@ -7,3 +7,4 @@
 6. {d}In-šu-uš-na-ak si-ia-an ku-uk-ra in du-ni-ih
 7. ú zag-ra-tu4-me ki-ik-ki-te-eh hu-ut-tak ha-li-ik ú-me
 8. {d}In-šu-uš-na-ak ul-li-na te-la-ak-ni
+9. ha-in-testststst
