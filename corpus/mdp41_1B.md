@@ -1,4 +1,5 @@
-MDP 41, 1B
+# MDP 41, 1B
+## TZ 1, Serie A
 
 5. ...]-at hu-us-s[i ...
 6. ...]-ši-ih {d}In-šu-uš-[...
