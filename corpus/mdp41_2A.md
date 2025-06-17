@@ -1,7 +1,7 @@
 MDP 41, 2A
-1. ú {m}Un-taš-{d}GAL ša-ak {m}{d}Hu-ban-nu-me-na-gi [s]u-un-ki-ik An-za-an Šu-šu-ka ú-pa-at
+1. u₂ {m}Un-taš-{d}GAL ša-ak {m}{d}Hu-ban-nu-me-na-gi [s]u-un-ki-ik An-za-an Šu-šu-ka u₂-pa-at
 2. la-an-si-ti-ip-pa te-pu-uh ul-hi i a-ha-a ku-ši-ih {d}GAL a-ak {d}In-šu-uš-na-ak si-ia-an
-3. ku-uk-pa a-pu ú du-ni-ih hu-ut-tak ha-li-ik-ú-me {d}GAL {d}In-šu-uš-na-ak si-ia-an
+3. ku-uk-pa a-pu u₂ du-ni-ih hu-ut-tak ha-li-ik-u₂-me {d}GAL {d}In-šu-uš-na-ak si-ia-an
 4. ku-uk-pa li-na te-la-ak-ni si-ia-an ap-pa ku-ši-ih-ma pi-el ki-it-ti-im-ma
 5. na-a-me-lu-uk-ra {d}GAL a-ak {d}In-šu-uš-na-ak si-ia-an ku-uk-pa gi-ri-na hi-ih-l[i]
 6. su-un-ki-ir pi-ti-ir a-ak ta-ri-ir ak-ka me-el-ka-an-ra ha-at-ta-an-ra a-ak la-an-si-ti-⸢e⸣
