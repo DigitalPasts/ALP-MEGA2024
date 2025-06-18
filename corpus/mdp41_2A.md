@@ -16,7 +16,7 @@ Var.
 1. Šu-šu-ka / Šu-šu-un-ka
 2. ul-hi i / ul-hi
 3. hu-ut-tak / hu-ut
-4. ap-pa / not used
+4. ap-pa / omitted
 5. hi-ih-li / hi-ih-ni
 6. su-un-ki-ir / su-un-ki; ha-at-ta-an-ra / ha-at-an-ra
 9. Na-ah-hu-un-te / Na-ah-hu-te; a-ni-i / a-ni
