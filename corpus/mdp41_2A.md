@@ -9,4 +9,4 @@ MDP 41, 2A
 8. {d}In-šu-uš-na-ak a-ak {d}Ki-ri-ri-ša si-ia-an ku-uk-pa ri-uk-ku-ri-ir ta-ak-n[i]
 9. {d}Na-ah-hu-un-te ir-ša-ra-ra pa-ar a-ni-i ku-tu₄-un su-un-ki-ir Ha-ta-am-ti-i[r]
 10. an-k[a] ru-ri-na a-ak mi-ši-ma-na ku-ur-ru ku-d[u-ni a-ak] hi-iš {m}Un-taš-{d}GAL-me a-ha
-[ta-áš-ni]
+[ta-aš₂-ni]
