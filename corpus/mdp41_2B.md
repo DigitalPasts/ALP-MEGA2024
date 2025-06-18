@@ -1,4 +1,4 @@
-
+MDP 41, 2B
 
 1. ⸢Un⸣-taš-DINGIR-GAL ša-ak {m}{d}Hu-ban-[...]
 2. la-[an-si]-ti-ip-pa te-pu-uh ul-[...]
