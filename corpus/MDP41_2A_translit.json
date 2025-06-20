@@ -1,0 +1,35 @@
+[
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-Mega2024/lemmabase/?highlight=pi-el",
+        "label": "pi-el",
+        "description": "pi-el (noun) "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q577",
+        "label": "year (Q577) "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "pi-el"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 359,
+          "end": 364
+        }
+      ]
+    },
+    "id": "#7ec5d316-d616-4b61-87ec-0142680e4e29"
+  }
+]
