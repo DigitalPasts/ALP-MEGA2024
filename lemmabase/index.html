@@ -1,0 +1,169 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.13.11/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+	<script src="https://cdn.datatables.net/plug-ins/1.13.6/pagination/input.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/2.3.2/api/page.jumpToData().js"></script>
+	<script src="https://cdn.datatables.net/colreorder/1.7.0/js/dataTables.colReorder.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+	<script src="https://cdn.datatables.net/plug-ins/1.13.6/sorting/natural.js"></script>
+    <script src="../js/data/senses.js"></script>
+    <title>Lemma Base</title>
+</head>
+<body>
+    <h1 style="text-align:center">Lemma Base Draft</h1>
+    <table id="lemmabasedraft">
+        <thead>
+            <tr><th>Lemma</th><th>Word Type</th><th>Base</th><th>Classifier</th><th>Morphemes</th><th>Sense</th><th>Time Period</th><th>Loan Word</th><th>Reference</th></tr>
+        </thead>
+        <tbody id="lemmabasedraftbody">
+
+        </tbody>
+    </table>
+</body>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+var highlightword=urlParams.get("highlight");
+tperiodmapping={
+    "nE":"http://www.wikidata.org/entity/Q29297050",
+    "mE":"http://www.wikidata.org/entity/Q29297151",
+    "oE":"http://www.wikidata.org/entity/Q29297301",
+    "achE":"http://www.wikidata.org/entity/Q114867307"
+}
+tperiodlabelmapping={
+    "nE":"Neo-Elamite Period",
+    "mE":"Middle Elamite Period",
+    "oE":"Old Elamite Period",
+    "achE":"Acheminid Elamite Period"
+}
+tabbody=""
+iseven=true
+curlemma=""
+var ishighlightword=false
+var counter=0
+for(sense in senses){
+    if(iseven){
+        if(sense==highlightword){
+            ishighlightword=true
+        }
+        curlemma=sense+" / "
+        iseven=!iseven
+        continue
+    }
+    if(ishighlightword || sense==highlightword){
+        highlightword=curlemma+sense
+    }
+    ishighlightword=false
+    counter+=1
+    iseven=!iseven
+    tabbody+="<tr><td>"+curlemma+sense+"</td>"
+    if("wordtype" in senses[sense]){
+        tabbody+="<td><a href=\""+Object.keys(senses[sense]["wordtype"])[0]+"\" target=\"_blank\">"+senses[sense]["wordtype"][Object.keys(senses[sense]["wordtype"])[0]]+" ("+Object.keys(senses[sense]["wordtype"])[0].substring(Object.keys(senses[sense]["wordtype"])[0].lastIndexOf("/")+1)+")</a></td>"
+    }else{
+        tabbody+="<td>N/A</td>"
+    }
+    if("base" in senses[sense]){
+        tabbody+="<td>"+senses[sense]["base"]+"</td>"
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("classifier" in senses[sense]){
+        tabbody+="<td>"+senses[sense]["classifier"]+"</td>"
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("morpheme" in senses[sense]){
+        tabbody+="<td>"+senses[sense]["morpheme"]+"</td>"
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("sense" in senses[sense]){
+        sensestring=""
+        if("de" in senses[sense]["sense"]){
+            for(var i=0;i<senses[sense]["sense"]["de"].length;i++){
+                var qidurl=""
+                if("qid" in senses[sense]["sense"] && i<senses[sense]["sense"]["qid"].length){
+                    qidurl=Object.keys(senses[sense]["sense"]["qid"][i])[0]
+                    sensestring+="<a href=\""+qidurl+"\" target=\"_blank\">"
+                }
+                if("en" in senses[sense]["sense"] && i<senses[sense]["sense"]["en"].length){
+                    sensestring+=senses[sense]["sense"]["en"][i]+"@en / "
+                }
+                sensestring+=senses[sense]["sense"]["de"][i]+"@de "
+                if("qid" in senses[sense]["sense"] && i<senses[sense]["sense"]["qid"].length){                    
+                    sensestring+="["+senses[sense]["sense"]["qid"][i][qidurl]+" ("+qidurl.substring(qidurl.lastIndexOf("/")+1)+")]</a>"
+                }
+                sensestring+="<br/>"      
+            }
+        }       
+        tabbody+="<td>"+sensestring+"</td>"
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("period" in senses[sense]){
+        if(senses[sense]["period"] in tperiodmapping){
+            tabbody+="<td><a href=\""+tperiodmapping[senses[sense]["period"]]+"\" target=\"_blank\">"
+            if(senses[sense]["period"] in tperiodlabelmapping){
+                tabbody+=tperiodlabelmapping[senses[sense]["period"]]+" ("+tperiodmapping[senses[sense]["period"]].substring(tperiodmapping[senses[sense]["period"]].lastIndexOf("/")+1)+")"
+            }else{
+                tabbody+=senses[sense]["period"]
+            }
+            tabbody+="</a></td>"
+        }else{
+            tabbody+="<td>"
+            if(senses[sense]["period"] in tperiodlabelmapping){
+                tabbody+=tperiodlabelmapping[senses[sense]["period"]]
+            }else{
+                tabbody+=senses[sense]["period"]
+            }    
+            tabbody+="</td>"
+        }      
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("loan_word" in senses[sense]){
+        tabbody+="<td>"
+        for(lw of senses[sense]["loan_word"]){
+            tabbody+="<a href=\""+lw["lid"]+"\" target=\"_blank\">"+lw["word"]+"@"+lw["language"].toLowerCase()+" ["+lw["lid_label"]+"]</a> <a href=\"https://situx.github.io/paleordia/l/?l="+lw["lid"].substring(lw["lid"].lastIndexOf("/")+1)+"&displaylang=en&qLabel="+lw["word"]+"\" target=\"_blank\">[to PaleOrdia]</a><br/>"
+        }
+        tabbody+="</td>"       
+    }else{
+        tabbody+="<td></td>"
+    }
+    if("reference" in senses[sense]){
+        tabbody+="<td><a href=\"http://www.wikidata.org/entity/Q130646912\" target=\"_blank\">"+senses[sense]["reference"]["title"]
+        if("volume" in senses[sense]["reference"] && senses[sense]["reference"]["volume"]!=""){
+            tabbody+=" vol. "+senses[sense]["reference"]["volume"]
+        }
+        if("page" in senses[sense]["reference"] && senses[sense]["reference"]["page"]!=""){
+            tabbody+=" p. "+senses[sense]["reference"]["page"]
+        }  
+        tabbody+="</a></td>"
+    }else{
+        tabbody+="<td></td>"
+    }
+    tabbody+="</tr>"
+}
+$('#lemmabasedraftbody').html(tabbody)
+var table=$('#lemmabasedraft').DataTable({responsive:true,lengthMenu: [[10, 25, 100,250,500,1000, -1], [10, 25, 100,250,500,1000, "All"]],paging:true,pagingType: "input"})
+if(highlightword!=null){
+   res=table.page.jumpToData(highlightword,0)
+   console.log(res)
+   //table.fnPageChange(pageNo-1)//.draw('page');
+}
+</script>
+</html>
