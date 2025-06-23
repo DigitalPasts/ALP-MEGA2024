@@ -1,0 +1,722 @@
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/@recogito/recogito-js@1.8.4/dist/recogito.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@recogito/recogito-js@1.8.4/dist/recogito.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+	<script src="../js/data/senses.js"></script>
+	<script src="../js/data/nuolenna.js"></script><script src="../js/lib/recogito-semantic-tags.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/d3-sparql@2.0.0/build/d3-sparql.min.js"></script>
+	</head>
+	<body>
+
+	<script>var r,r2,annotationnamespace="https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/";
+	var currentfont=null;
+    fontlinks={
+		"santakku":"https://tacume.gitlab.io/cuneiform_webtools/fonts/Santakku.woff",
+		"santakkum":"https://tacume.gitlab.io/cuneiform_webtools/fonts/SantakkuM.woff",
+		"cuneiformob":"https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformOB.woff",
+		"ullimummia":"https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiA.woff",
+		"akkadian":"https://tacume.gitlab.io/cuneiform_webtools/fonts/Akkadian.ttf",
+		"elamiteh":"../fonts/elamite_h.woff",
+		"ullikummib":"https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiB.woff",
+		"ullikummic":"https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiC.woff",
+		"assurbanipal":"https://tacume.gitlab.io/cuneiform_webtools/fonts/Assurbanipal.woff",
+		"cuneiformna":"https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformNA.woff",
+		"sinacherib":"https://tacume.gitlab.io/cuneiform_webtools/fonts/Sinacherib.ttf",
+		"cuneiformcomposite":"https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformComposite.ttf"
+
+	}
+	function createCurrentFont(fontname){
+		if(fontname in fontlinks){
+			const buffer = fetch(fontlinks[fontname]).then(res => res.arrayBuffer());
+			console.log(buffer)
+			buffer.then(data => {
+    			currentfont = opentype.parse(data);
+    			console.log(currentfont);
+			})
+		}
+	}
+	function checkCurrentFontForChar(chara){	
+		//console.log(currentfont)	
+		if(currentfont==null){
+			return false
+		}
+		console.log("Checking for glyph: "+chara+" ")
+		console.log(currentfont.charToGlyph(chara))
+		res=currentfont.charToGlyph(chara)
+		console.log(res["name"])
+		if(res["name"]!=".notdef"){
+			return true;
+		}
+		return false;
+	}
+        function parseFromWikiPage(){
+	    $.get("https://database.factgrid.de/wiki/D-Q894369?origin=*&action=raw", function( data ) {
+		console.log(data)
+		var translitstart=data.indexOf("id=\"transliteration\"")
+		var translitend=data.indexOf("</poem>",translitstart+1)
+		console.log(data.substring(data.indexOf(">",translitstart)+1,translitend))
+            });
+	}
+	parseFromWikiPage()
+	</script>
+	<style>
+@font-face {
+font-family: ElamiteH;
+src: url(https://situx.github.io/elamiteannotation/fonts/elamite_h.woff2) format("woff2"),
+	url(https://situx.github.io/elamiteannotation/fonts/elamite_h.woff) format("woff"),
+	url(https://situx.github.io/elamiteannotation/fonts/elamite_h.ttf) format("truetype");
+}
+.elamiteh {
+font-family: ElamiteH;
+}
+@font-face {
+font-family: Santakku;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Santakku.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Santakku.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Santakku.ttf) format("truetype");
+}
+.santakku {
+font-family: Santakku;
+}
+@font-face {
+font-family: CuneiformOB;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformOB.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformOB.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformOB.ttf) format("truetype");
+}
+.cuneiformob {
+font-family: CuneiformOB;
+}
+@font-face {
+font-family: SantakkuM;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/SantakkuM.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/SantakkuM.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/SantakkuM.ttf) format("truetype");
+}
+.akkadian {
+font-family: Akkadian;
+}
+@font-face {
+font-family: Akkadian;
+src:  url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Akkadian.ttf) format("truetype");
+}
+.santakkum {
+font-family: SantakkuM;
+}
+@font-face {
+font-family: UllikummiA;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiA.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiA.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiA.ttf) format("truetype");
+}
+.ullikummia {
+font-family: UllikummiA;
+}
+@font-face {
+font-family: UllikummiB;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiB.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiB.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiB.ttf) format("truetype");
+}
+.ullikummib {
+font-family: UllikummiB;
+}
+@font-face {
+font-family: UllikummiC;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiC.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiC.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/UllikummiC.ttf) format("truetype");
+}
+.ullikummic {
+font-family: UllikummiC;
+}
+@font-face {
+font-family: Assurbanipal;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Assurbanipal.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Assurbanipal.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Assurbanipal.ttf) format("truetype");
+}
+.assurbanipal {
+font-family: Assurbanipal;
+}
+
+@font-face {
+font-family: CuneiformNA;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformNA.woff) format("woff"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformNA.eot) format("embedded-opentype"),
+		url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformNA.ttf) format("truetype");
+}
+.cuneiformna {
+font-family: CuneiformNA;
+}
+
+@font-face {
+font-family: Sinacherib;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/Sinacherib.ttf) format("truetype");
+}
+.sinacherib {
+font-family: Sinacherib;
+}
+
+@font-face {
+font-family: CuneiformComposite;
+src: url(https://tacume.gitlab.io/cuneiform_webtools/fonts/CuneiformComposite.ttf) format("truetype");
+}
+.cuneiformcomposite {
+font-family: CuneiformComposite;
+}
+	html, body {
+        padding:10px 20px;
+        margin:0;
+      }
+
+      h1 {
+        font-size:22px;
+        margin-top:30px;
+        margin-bottom:20px;
+      }
+	  
+	  .left {
+		width:49%;
+		float:left;
+	  }
+	  
+	  .right{
+		width:50%;
+		float:right;
+	  }
+
+      #content {      
+        font-family:'Lato', sans-serif;
+        font-size:17px;
+        line-height:27px;
+      }</style><script defer="defer" src="../js/lib/recogito-semantic-tags.min.js"></script></head><body>
+		<div id="content" class="plaintext"><h1>Elamite Text Annotation</h1>
+	  Load an Elamite text by selection <select id="selecttext" onchange="loadText()"></select>
+          <br/><span class="left"><button id="owntext" onclick="textArea()">Enter own Text in ATF</button>
+		  <button id="edittext" onclick="editText()">Edit Text</button><button id="owntext" onclick="useText()">Save</button>
+		  <button id="saveanno" onclick="saveTextAsFile(JSON.stringify(r.getAnnotations(),null,2),'json',document.getElementById('selecttext').options[document.getElementById('selecttext').selectedIndex].text+'_translit')">Save Transliteration Annotations as JSON</button></span>
+		  <span class="right"><span id="popuplang" class="left">Tooltip Language:<select id="popuplanguage"><option value="Elamite">Elamite</option><option value="sux">Sumerian</option><option value="akk;sux">Akkadian</option></select></span><br/><button id="saveanno" onclick="saveTextAsFile(JSON.stringify(r2.getAnnotations(),null,2),'json',document.getElementById('selecttext').options[document.getElementById('selecttext').selectedIndex].text+'_cunei')">Save Unicode Cuneiform Annotations as JSON</button></span>
+          
+	   <span id="fontchooser" class="right">Font: <select id="font" onchange="updateFont()">
+		  <option value="cuneiformcomposite">Cuneiform Composite (Cuneiform Composite)</option>
+		   <option value="elamiteh">Elamite (Hallock)</option>
+		  <option value="akkadian">Akkadian (Akkadian)</option>
+          <option value="assurbanipal">Neo-Assyrian (Assurbanipal)</option>
+		  <option value="cuneiformna">Neo-Assyrian (CuneiformNA)</option>
+		  <option value="sinacherib">Neo-Assyrian (Sinacherib)</option>
+		  <option value="santakku">Cursive Old Babylonian (Santakku)</option>
+	  	  <option value="cuneiformob">Monumental Old Babylonian (CuneiformOB)</option>
+		  <option value="cuneiformob2">Monumental Old Babylonian (SantakkuM)</option>
+		  <option value="ullikummia">Hittite (UllikummiA)</option>
+		  <option value="ullikummib">Hittite (UllikummiB)</option>
+		  <option value="ullikummic">Hittite (UllikummiC)</option>  
+	  </select></span> 
+	  <p id="cdlitext" class="left" style="white-space: pre;" contenteditable="false"></p>
+	  <p id="cdlitextcunei" class="right"></p>
+	  </div>
+      <script>
+	  elamtexts={
+		    "MDP41_1A":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_1A.md",  
+		    "MDP41_1B":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_1B.md",  
+		    "MDP41_2A":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_2A.md",  
+		    "MDP41_2B":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_2B.md",  
+		    "MDP41_3":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_3.md",      
+		    "MDP41_4A":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_4A.md",    
+		    "MDP41_4B":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_4B.md",    
+		    "MDP41_5":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_5.md",  
+		    "MDP41_6":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_6.md",    
+		    "MDP41_7":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_7.md",  
+		    "MDP41_8":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_8.md",    
+		    "MDP41_9":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_9.md",  
+		    "MDP41_10":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_10.md",
+		    "MDP41_11":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_11.md",
+		    "MDP41_12":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_12.md",
+		    "MDP41_13":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_13.md",
+		    "MDP41_14":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_14.md",
+		    "MDP41_15":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_15.md",
+		    "MDP41_16":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_16.md",
+		    "MDP41_17":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_17.md",
+		    "MDP41_18":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_18.md",
+		    "MDP41_19":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_19.md",
+		    "MDP41_20":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_20.md",
+		    "MDP41_21":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_21.md",
+		    "MDP41_22":"https://raw.githubusercontent.com/DigitalPasts/ALP-MEGA2024/refs/heads/main/corpus/MDP41_22.md"	     
+		    }
+	  var options=""
+	  for(val in elamtexts){
+	  	options+="<option value=\""+elamtexts[val]+"\">"+val+"</option>"
+	  }
+	  $('#selecttext').html(options)
+	  function updateFont(){
+		$("#cdlitextcunei").removeClass();
+		$('#cdlitextcunei').addClass("right")
+	  	$('#cdlitextcunei').addClass($('#font').val())
+		createCurrentFont($('#font').val())
+	  }
+	  function textArea(){
+		if(!document.getElementById("cdlitext").isContentEditable){
+			$('#cdlitext').html("")
+			$('#cdlitextcunei').html("")
+			$('#cdlitext').attr("contenteditable",true);
+			//$('#owntext').prop("disabled",false);
+			$('#cdlitext').css('border', '1px solid black');		
+		}
+	  }
+	  function editText(){
+		if(!document.getElementById("cdlitext").isContentEditable){
+			$('#cdlitext').html($('#cdlitext').html().replaceAll("<br>","\n"))							
+			$('#cdlitext').attr("contenteditable",true);
+			//$('#owntext').prop("disabled",false);
+			$('#cdlitext').css('border', '1px solid black');
+		}
+	  }
+	   function useText(){
+		if(document.getElementById("cdlitext").isContentEditable){
+			$('#cdlitextcunei').html("")
+			$('#cdlitext').attr("contenteditable",false);
+			//$('#owntext').prop("disabled",true);
+			$('#cdlitext').css('border', 'none');
+			initializeText($('#cdlitext').text())
+		}
+	  }
+	  var wordinfocache={}
+      function loadText(){
+            //cdlinumber=$('#selecttext').val()
+	//		$('#cdlitext').css('border', 'none');
+            $.get( $('#selecttext').val(), function( data ) {
+				initializeText(data)
+            });
+      }
+
+	function saveTextAsFile(tosave,fileext,filename)
+	{
+		var a = document.createElement('a');
+		a.style = "display: none";  
+		var blob= new Blob([tosave], {type:'text/plain'});
+		var url = window.URL.createObjectURL(blob);
+		var filename = filename+"."+fileext;
+		a.href = url;
+		a.download = filename;
+		document.body.appendChild(a);
+		a.click();
+		setTimeout(function(){
+			document.body.removeChild(a);
+			window.URL.revokeObjectURL(url);  
+		}, 1000);
+	}
+
+
+      function initializeText(data){
+	$('#cdlitext').html(data.replaceAll("\n"," <br>").replaceAll("&nbsp;"," "))							
+	$('#cdlitextcunei').html(data.replaceAll("\n"," <br>"))
+	$('p').each(function() {
+		var $this = $(this);
+		result=""
+		splitted=$this.html().toString().replaceAll("&nbsp;"," ").split(" ")
+		if($this.attr('id').toString().includes("cunei")){
+			splittedcunei=""
+			for(word in splitted){
+				if(word!=""){
+					splittedcunei+="<span>"
+					wordsplit=splitted[word].replaceAll("{","-").replaceAll("}","-").split("-")
+					//console.log(wordsplit)
+					for(chara in wordsplit){
+						repcharanschars=wordsplit[chara].replaceAll(/[\[\],\.#!⸣⸢;\?]/g,"")
+						repchara=repcharanschars.replaceAll("sz","š").replaceAll("1","₁").replaceAll("2","₂").replaceAll("3","₃").replaceAll("4","₄").replaceAll("5","₅").replaceAll("6","₆").replaceAll("7","₇").replaceAll("8","₈").replaceAll("9","₉").replaceAll("0","₀")
+						repchara=repchara.replaceAll("₁(","1(").replaceAll("₂(","2(").replaceAll("₃(","3(").replaceAll("₄(","4(").replaceAll("₅(","5(").replaceAll("₆(","6(").replaceAll("₇(","7(").replaceAll("₈(","8(").replaceAll("₉(","9(").replaceAll("₀(","0(")
+						repchara=repchara.toLowerCase()
+						//console.log(repchara)
+						if(repchara in nuolenna){
+							//console.log(repchara+" - "+nuolenna[repchara])
+							//if(wordsplit[chara].indexOf(repcharanschars)>0){
+							//	splittedcunei+=wordsplit[chara].substring(0,repcharanschars)
+							//}
+							if(currentfont==null || checkCurrentFontForChar(nuolenna[repchara])){
+								splittedcunei+=nuolenna[repchara]
+							}else{
+								splittedcunei+="<span style=\"background-color:#ff5050;\">"+nuolenna[repchara]+"</span>"
+							}
+							//splittedcunei+=nuolenna[repchara]
+							//if(
+						}else{
+							splittedcunei+=wordsplit[chara]
+						}											
+					}
+					splittedcunei+="</span><span>$</span>"
+				}
+			}
+			$this.html(splittedcunei);
+		}else{
+			for(word in splitted){
+				result+="<span>"+splitted[word]+"</span><span>$</span>"
+			}
+			$this.html(result);
+		}
+		loadRecogito($this.attr('id').toString())
+		$this.html($this.html().replaceAll("<span>$</span>","<span>&nbsp;</span>"))
+	});
+
+	// bind to each span
+	$('p span').hover(
+		function() { $('#word').text($(this).css('background-color','#ffff66').text())
+			myatt=$(this).attr("title")
+			if (typeof myatt === 'undefined' || myatt === false) {
+				thetext=$(this).text().replaceAll(/[\[\],\.#!\?]/g,"")
+				if(thetext in wordinfocache){
+					$(this).attr("title",wordinfocache[thetext])
+				}else{
+					wordInformationFromWikidata($('#popuplanguage').val(),thetext,$(this))							
+				}
+				$(this).trigger('hover')
+			}							
+		},
+		function() { $('#word').text(''); $(this).css('background-color',''); }
+	);
+
+	}
+	 
+	function formatPopup(data,spanitem,word){
+		if(data.length==0){
+			spanitem.attr("title",word+" not found!")
+			wordinfocache[word]=word+" not found!"
+		}else{
+			thetitle="<ul>"
+			thetitletext={}
+			for(item in data){
+				thetitle+="<li><a href=\""+data[item]["l"]+"\">"+data[item]["lemma"]+"</a> ("+data[item]["lexcatlabel"]+") [<a href=\""+data[item]["senseval"]+"\">"+data[item]["senselabel"]+"</a>]</li>"
+				if("senseval" in data[item] && data[item]["senseval"]!=""){
+					thetitletext[data[item]["lemma"]+" ("+data[item]["lexcatlabel"]+") ["+data[item]["senselabel"]+" ("+data[item]["senseval"].replace("http://www.wikidata.org/entity/","")+")]\n"]=true
+				}else{
+					thetitletext[data[item]["lemma"]+" ("+data[item]["lexcatlabel"]+") ["+data[item]["senselabel"]+"]\n"]=true
+				}
+			}
+			thetitle+="</ul>"
+			console.log(thetitletext)
+			thetext=""
+			for(textpart in thetitletext){
+				thetext+=textpart
+			}
+			spanitem.attr("title",thetext.trim())
+			wordinfocache[word]=thetext
+		}	
+	}
+
+	function wordInformationFromJSON(lang,word,spanitem){
+		var reslist=[]
+		if(word in senses){
+			if("sense" in senses[word] && "de" in senses[word]["sense"]){
+				for(var i=0;i<senses[word]["sense"]["de"].length;i++){
+					if("qid" in senses[word]["sense"] && i<senses[word]["sense"]["qid"].length){
+						reslist.push({"l":"https://situx.github.io/elamiteannotation/"+word.replaceAll(" ",""),
+						"lemma":word,"lexcatlabel":senses[word]["wordtype"][Object.keys(senses[word]["wordtype"])[0]],"senseval":Object.keys(senses[word]["sense"]["qid"][i])[0],
+						"senselabel":senses[word]["sense"]["qid"][i][Object.keys(senses[word]["sense"]["qid"][i])[0]]})
+					}else{
+						reslist.push({"l":"https://situx.github.io/elamiteannotation/"+word.replaceAll(" ",""),
+						"lemma":word,"lexcatlabel":senses[word]["wordtype"][Object.keys(senses[word]["wordtype"])[0]],"senseval":"",
+						"senselabel":senses[word]["sense"]["de"][i]})
+					}
+				}
+			}
+		}
+		console.log(reslist)
+		formatPopup(reslist,spanitem,word)
+	}
+	      
+	function wordInformationFromWikidata(lang,word,spanitem){
+		if(lang=="Elamite"){
+			wordInformationFromJSON(lang,word,spanitem)
+			return
+		}
+		if(!Array.isArray(lang)){
+			if(lang.includes(";")){
+				lang=lang.split(";")
+			}else{
+				lang=[lang]
+			}
+		}
+		//console.log(lang)
+        query=word	
+		limit=5
+		var sparql = `
+			  SELECT DISTINCT ?l ?lf ?senseval ?senselabel ?lexcatlabel ?lfgram ?gflabel (GROUP_CONCAT(DISTINCT ?lemmaa; separator=" / ") as ?lemma) WHERE {
+				BIND(LCASE("${query}"@${lang[0]}) as ?term)
+				{?lang wdt:P218 "${lang[0]}" . } UNION {?lang wdt:P219 "${lang[0]}" . }
+				?l rdf:type ontolex:LexicalEntry ;
+				   dct:language ?lang ;
+				   wikibase:lemma ?lemmaa;
+				   ontolex:lexicalForm ?lf .
+				OPTIONAL {?l wikibase:lexicalCategory ?lexcat . ?lexcat rdfs:label ?lexcatlabel . FILTER((LANG(?lexcatlabel))= "en") }
+				?lf ontolex:representation ?rep .
+				OPTIONAL {?lf wikibase:grammaticalFeature ?lfgram . ?lfgram rdfs:label ?gflabel . FILTER((LANG(?gflabel))= "en")}
+				?l ontolex:sense ?sense . ?sense wdt:P5137 ?senseval . OPTIONAL { ?senseval rdfs:label ?senselabel . FILTER((LANG(?senselabel))= "en") }        
+				FILTER(lcase(str(?rep))=lcase("${query}"))       
+			  }
+			  GROUP BY ?l ?lf ?senseval ?senselabel ?lexcatlabel ?lfgram ?gflabel
+			  ORDER BY ?l ?lfgram ?sense ?senselabel 
+			  LIMIT ${limit}
+			`;
+		  //sparql=sparql.replaceAll("${query}",word)
+		  wikidataUrl = 'https://query.wikidata.org/sparql'
+		  d3.sparql(wikidataUrl, sparql).then((data) => {
+		    //console.log(data);
+			if(data.length==0 && lang.length>1){
+				lang.shift()
+				wordInformationFromWikidata(lang,word,spanitem)
+			}else{
+				formatPopup(data,spanitem,word)
+			}
+		  })
+	}
+	  
+	
+class ElamiteWF {
+
+  constructor(widgetConfig) {
+    this.name = widgetConfig?.name || 'ElamiteWF'
+    this.wordformmode=true	  
+  }
+
+  // Query string + global widget configuration (language, etc.)
+  async query(query, globalConfig) {
+	console.log("ElamiteSource: "+query)
+	console.log(senses)
+	if(query in senses){
+		console.log("ElamiteSource: "+query+ " found!")
+		console.log(senses[query])
+		var reslist=[]
+		var res={"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),"label":query,"taglabel":query}
+		var lang=""
+		if("sense" in senses[query] && "de" in senses[query]["sense"]){
+			lang="de"
+		}else if("sense" in senses[query] && "en" in senses[query]["sense"]){
+			lang="en"
+		}
+		var wordtypes={}
+		var sensecounter=0
+		if("sense" in senses[query] && lang!=""){
+			for(var i=0;i<senses[query]["sense"][lang].length;i++){
+				if(!this.wordformmode && "qid" in senses[query]["sense"] && i<senses[query]["sense"]["qid"].length){
+					var thelabel=""
+					if("de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length){
+						thelabel=senses[query]["sense"]["de"][i]+" "
+					}
+					if("de" in senses[query]["sense"] && i<senses[query]["sense"].length && "en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=" / "+senses[query]["sense"]["en"][i]+" "
+					}else if("en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=senses[query]["sense"]["en"][i]+" "
+					}
+					thelabel+="["+senses[query]["sense"]["qid"][i][Object.keys(senses[query]["sense"]["qid"][i])[0]]+" ("+Object.keys(senses[query]["sense"]["qid"][i])[0].replace("http://www.wikidata.org/entity/","")+")] "
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+					"label":query,"taglabel":query,
+					"description":query+": "+thelabel,
+					"sensedescription":query+" with Sense "+thelabel,
+					"senselabel":thelabel,
+					"senseuri":Object.keys(senses[query]["sense"]["qid"][i])[0],
+					"uri2":Object.keys(senses[query]["sense"]["qid"][i])[0],
+					"label2":thelabel,
+					"sensetaglabel":thelabel})
+				}else if((!this.wordformmode && "qid" in senses[query]["sense"] && i>=senses[query]["sense"]["qid"].length && "de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length) || (!this.wordformmode && !("qid" in senses[query]["sense"]) && "de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length)){
+					var thelabel=senses[query]["sense"]["de"][i]
+					if("en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=" / "+senses[query]["sense"]["en"][i]
+					}
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+					"label":query,"taglabel":query,
+					"description":query+": "+thelabel,
+					"sensedescription":query+" with Sense "+thelabel,
+					"senselabel":thelabel,
+					"senseuri":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1),
+					"uri2":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1),
+					"label2":thelabel,
+					"sensetaglabel":thelabel})
+				}else if(this.wordformmode && "wordtype" in senses[query]){
+					if(!(Object.keys(senses[query]["wordtype"])[0] in wordtypes)){
+						reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+						"label":query,"taglabel":query,
+						"description":query+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+") ",
+						"sensedescription":query+" with Wordform "+senses[query]["wordtype"]+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+") ",
+						"senselabel":senses[query]["wordtype"][0]+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+")",
+						"senseuri":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]],
+						"uri2":Object.keys(senses[query]["wordtype"])[0],
+						"label2":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+" ("+Object.keys(senses[query]["wordtype"])[0]+") ",
+						"sensetaglabel":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+" ("+Object.keys(senses[query]["wordtype"])[0]+") "})
+						wordtypes[Object.keys(senses[query]["wordtype"])[0]]=true
+					}
+				}else{
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+						      "label":query,
+						      "taglabel":query,
+						      "description":query,
+					"label2":senses[query]["sense"][lang][i],"uri2":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1)})
+				}
+			}
+		}
+		
+		console.log(reslist)
+		return reslist
+	}
+	console.log("ElamiteSource: "+query+ " not found!")
+	return [];
+  }
+
+}
+
+ElamiteWF.matches = tag =>
+  true;
+
+ElamiteWF.format = tag =>
+  (tag.label?tag.label+"(":"")+tag.uri.substring(tag.uri.lastIndexOf('/') + 1)+(tag.label?")":"");
+
+
+class ElamiteSense {
+
+  constructor(widgetConfig) {
+    this.name = widgetConfig?.name || 'ElamiteSense'
+    this.wordformmode=false
+  }
+
+  // Query string + global widget configuration (language, etc.)
+  async query(query, globalConfig) {
+	console.log("ElamiteSource: "+query)
+	console.log(senses)
+	if(query in senses){
+		console.log("ElamiteSource: "+query+ " found!")
+		console.log(senses[query])
+		var reslist=[]
+		var res={"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),"label":query,"taglabel":query}
+		var lang=""
+		if("sense" in senses[query] && "de" in senses[query]["sense"]){
+			lang="de"
+		}else if("sense" in senses[query] && "en" in senses[query]["sense"]){
+			lang="en"
+		}
+		var wordtypes={}
+		if("sense" in senses[query] && lang!=""){
+			for(var i=0;i<senses[query]["sense"][lang].length;i++){
+				if(!this.wordformmode && "qid" in senses[query]["sense"] && i<senses[query]["sense"]["qid"].length){
+					var thelabel=""
+					if("de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length){
+						thelabel=senses[query]["sense"]["de"][i]+" "
+					}
+					if("de" in senses[query]["sense"] && i<senses[query]["sense"].length && "en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=" / "+senses[query]["sense"]["en"][i]+" "
+					}else if("en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=senses[query]["sense"]["en"][i]+" "
+					}
+					thelabel+="["+senses[query]["sense"]["qid"][i][Object.keys(senses[query]["sense"]["qid"][i])[0]]+" ("+Object.keys(senses[query]["sense"]["qid"][i])[0].replace("http://www.wikidata.org/entity/","")+")] "
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+					"label":query,"taglabel":query,
+					"description":query+": "+thelabel,
+					"sensedescription":query+" with Sense "+thelabel,
+					"senselabel":thelabel,
+					"senseuri":Object.keys(senses[query]["sense"]["qid"][i])[0],
+					"uri2":Object.keys(senses[query]["sense"]["qid"][i])[0],
+					"label2":thelabel,
+					"sensetaglabel":thelabel})
+				}else if((!this.wordformmode && "qid" in senses[query]["sense"] && i>=senses[query]["sense"]["qid"].length && "de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length) || (!this.wordformmode && !("qid" in senses[query]["sense"]) && "de" in senses[query]["sense"] && i<senses[query]["sense"]["de"].length)){
+					var thelabel=senses[query]["sense"]["de"][i]
+					if("en" in senses[query]["sense"] && i<senses[query]["sense"]["en"].length){
+						thelabel+=" / "+senses[query]["sense"]["en"][i]
+					}
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+					"label":query,"taglabel":query,
+					"description":query+": "+thelabel,
+					"sensedescription":query+" with Sense "+thelabel,
+					"senselabel":thelabel,
+					"senseuri":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1),
+					"uri2":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1),
+					"label2":thelabel,
+					"sensetaglabel":thelabel})
+				}else if(this.wordformmode && "wordtype" in senses[query]["sense"]){
+					if(!(Object.keys(senses[query]["wordtype"])[0] in wordtypes)){
+						reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+						"label":query,"taglabel":query,
+						"description":query+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+") ",
+						"sensedescription":query+" with Wordform "+senses[query]["wordtype"]+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+") ",
+						"senselabel":senses[query]["wordtype"][0]+" ("+senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+")",
+						"senseuri":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]],
+						"uri2":Object.keys(senses[query]["wordtype"])[0],
+						"label2":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+" ("+Object.keys(senses[query]["wordtype"])[0]+") ",
+						"sensetaglabel":senses[query]["wordtype"][Object.keys(senses[query]["wordtype"])[0]]+" ("+Object.keys(senses[query]["wordtype"])[0]+") "})
+						wordtypes[Object.keys(senses[query]["wordtype"])[0]]=true
+					}
+				}else{
+					reslist.push({"uri":annotationnamespace+"?highlight="+query.replaceAll(" ",""),
+						      "label":query,
+						      "taglabel":query,
+						      "description":query,
+					"label2":senses[query]["sense"][lang][i],"uri2":annotationnamespace+"?highlight="+query.replaceAll(" ","")+"&sense="+query.replaceAll(" ","")+"_s"+(i+1)})
+				}
+			}
+		}
+		
+		console.log(reslist)
+		return reslist
+	}
+	console.log("ElamiteSource: "+query+ " not found!")
+	return [];
+  }
+
+}
+
+ElamiteSense.matches = tag =>
+  true;
+
+ElamiteSense.format = tag =>
+  (tag.label?tag.label+"(":"")+tag.uri.substring(tag.uri.lastIndexOf('/') + 1)+(tag.label?")":"");
+	      
+
+      function loadRecogito(paraid){
+        // Configuration options for the semantic tag widget
+        var widgetConfig = {
+          // List of data sources, strings for built-in connectors.
+          // Could support functions in the future, for more
+          // customization
+          dataSources: [
+		  ElamiteSense,
+		  ElamiteWF,
+            //'Wikidata',
+			{ source: 'WikidataLexeme', name: 'WD Lexeme', wordformmode:false },
+			//{ source: 'WikidataLexeme', name: 'WD Lexeme Regex', wordformmode:false, normpattern:/[\[\]\(\),\.#!\?]/g, targetpattern:""},
+			//{ source: 'WikidataLexeme', name: 'WD Lexeme CB', wordformmode:false, normpattern:function(query){ query=query.replaceAll("š","sz"); query=query.replaceAll(/[\[\]\(\),\.#!\?]/g,""); console.log(query); return query}, targetpattern:""},
+			{ source: 'WikidataLexeme', name: 'WD Lexeme Wordform', wordformmode:true, normpattern:/[\[\]\(\),\.#!\?]/g},
+            //{ source: 'Wikidata', name: 'WD People', filter: 'Q5' }, // "human"
+			
+            // { source: 'Wikidata', name: 'WD Works', filter: 'Q7725634' }, // "literary works"
+            //'VIAF',
+            //'JISC',
+            //{ source: 'DPLA', apiKey: 'e9fc393b69f416ca0b7d9c5117deafe7' },
+            //'BNF'
+          ],
+          language: 'sux', // Search language (default 'en', 'auto' uses browser locale)
+          availableLanguages: [ 'sux','en', 'fr', 'es' ],
+          limit: 20,      // Search result page length (default 20)
+        };
+		if(paraid.toString().includes("cunei")){
+		        r2 = Recogito.init({
+          content: paraid,
+      	  widgets: [
+            'COMMENT',
+            recogito.SemanticTags(widgetConfig)
+          ]
+        });
+				  r2.loadAnnotations($('#selecttext').val().replace(".md","_unicode.json"))
+		}else{
+		  r = Recogito.init({
+          content: paraid,
+      	  widgets: [
+            'COMMENT',
+            recogito.SemanticTags(widgetConfig)
+          ]
+        });
+		 r.loadAnnotations($('#selecttext').val().replace(".md","_translit.json"))
+		}
+      }
+      window.onload =loadText()
+      </script></div>
+      </body></html>
