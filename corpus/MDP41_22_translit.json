@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "TextualBody",
+        "value": "should link to {d}hu-ban-um-me-en-na; how to mark genitive?",
+        "purpose": "commenting"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "{d}hu-ban-um-me-en-na-ki"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 47,
+          "end": 71
+        }
+      ]
+    },
+    "id": "#ab9961b7-0bfe-45b8-bab4-146a762665cd"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=su-un-ki-ik",
+        "label": "su-un-ki-ik",
+        "description": "su-un-ki-ik: König ich / to be king"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=su-un-ki-ik&sense=su-un-ki-ik_s1",
+        "label": "König ich / to be king"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "su-un-ki-ik"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 72,
+          "end": 83
+        }
+      ]
+    },
+    "id": "#12666d58-b083-4cc6-acbe-3ff68d029042"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "TextualBody",
+        "value": "should link to szu-szu-un; how to mark genitive?",
+        "purpose": "commenting"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "szu-szu-un-ka"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 96,
+          "end": 109
+        }
+      ]
+    },
+    "id": "#aca46e4e-8fee-48f7-8516-f351ad9942e5"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "TextualBody",
+        "value": "should link to hi",
+        "purpose": "commenting"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "hu"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 239,
+          "end": 241
+        }
+      ]
+    },
+    "id": "#4121db94-7050-4977-92d5-ff83d5c731e4"
+  }
+]
