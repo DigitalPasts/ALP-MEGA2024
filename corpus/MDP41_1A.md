@@ -1,5 +1,5 @@
 MDP 41, 1A
-1. u3 {m}un-tasz-DINGIR-GAL sza-ak {m}hu-ban-nu-me-na-ki su-
+1. u3 {m}un-tasz-dingir-gal sza-ak {m}hu-ban-nu-me-na-ki su-
 2. un-ki-ik An-za-an szu-szu-un-ka ta-ak-me u2-me
 3. tu4-ur hi-ih si-it-me u2-me szu-ul-lu-me-ga az-ki-it tu4-ur
 4. sah-ri hu-szu-ia in-gi hi-en-ga in-di-ig-ga a-gi si-ia-an u2-pa-
