@@ -1,6 +1,6 @@
 MDP 41, 2A
 
-1. u2 {m}un-tasz-dingir-gal sza-ak {m}{d}hu-ban-nu-me-na-gi ⸢su⸣-un-ki-ik An-za-an szu-szu-ka u2-pa-at
+1. u2 {m}un-tasz-dingir-gal sza-ak {m}{d}hu-ban-nu-me-na-gi ⸢su⸣-un-ki-ik an-za-an szu-szu-ka u2-pa-at
 2. la-an-si-ti-ip-pa te-pu-uh ul-hi i a-ha-a ku-szi-ih dingir-gal a-ak {d}in-szu-usz-na-ak si-ia-an-
 3. ku-uk-pa a-pu u2 du-ni-ih hu-ut-tak-ha-li-ik u2-me dingir-gal {d}in-szu-usz-na-ak si-ia-an-
 4. ku-uk-pa li-na te-la-ak-ni si-ia-an ap-pa ku-szi-ih-ma pi-el ki-it-ti-im-ma
