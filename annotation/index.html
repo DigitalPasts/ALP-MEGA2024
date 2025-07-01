@@ -416,9 +416,15 @@ font-family: CuneiformComposite;
 						"lemma":word,"lexcatlabel":senses[word]["wordtype"][Object.keys(senses[word]["wordtype"])[0]],"senseval":Object.keys(senses[word]["sense"]["qid"][i])[0],
 						"senselabel":senses[word]["sense"]["qid"][i][Object.keys(senses[word]["sense"]["qid"][i])[0]]})
 					}else{
-						reslist.push({"l":"https://situx.github.io/elamiteannotation/"+word.replaceAll(" ",""),
-						"lemma":word,"lexcatlabel":senses[word]["wordtype"][Object.keys(senses[word]["wordtype"])[0]],"senseval":"",
-						"senselabel":senses[word]["sense"]["de"][i]})
+						if("wordtype" in senses[word] && senses[word]["wordtype"].length>0){
+							reslist.push({"l":"https://situx.github.io/elamiteannotation/"+word.replaceAll(" ",""),
+							"lemma":word,"lexcatlabel":senses[word]["wordtype"][Object.keys(senses[word]["wordtype"])[0]],"senseval":"",
+							"senselabel":senses[word]["sense"]["de"][i]})
+						}else{
+							reslist.push({"l":"https://situx.github.io/elamiteannotation/"+word.replaceAll(" ",""),
+							"lemma":word,"lexcatlabel":"","senseval":"",
+							"senselabel":senses[word]["sense"]["de"][i]})
+						}
 					}
 				}
 			}
