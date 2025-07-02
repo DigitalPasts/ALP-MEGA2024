@@ -1,0 +1,1448 @@
+[
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=u3",
+        "label": "u3",
+        "description": "u3: ich [self (Q3236990)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3236990",
+        "label": "ich [self (Q3236990)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "u3"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 15,
+          "end": 17
+        }
+      ]
+    },
+    "id": "#aa1bca90-4814-461e-a9e3-42ec30e45c5f"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={m}un-tasz-dingir-gal",
+        "label": "{m}un-tasz-dingir-gal",
+        "description": "{m}un-tasz-dingir-gal: Untaš-Napiriša"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={m}un-tasz-dingir-gal&sense={m}un-tasz-dingir-gal_s1",
+        "label": "Untaš-Napiriša"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "{m}un-tasz-dingir-gal"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 18,
+          "end": 39
+        }
+      ]
+    },
+    "id": "#c53a7273-f874-4537-a3ea-53ae64dd8a34"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=sza-ak",
+        "label": "sza-ak",
+        "description": "sza-ak: son [son (Q177232)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q177232",
+        "label": "son [son (Q177232)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "sza-ak"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 40,
+          "end": 46
+        }
+      ]
+    },
+    "id": "#20326899-3f46-4a2f-9a9f-9c0aeeb224ed"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={m}hu-ban-nu-me-na-ki",
+        "label": "{m}hu-ban-nu-me-na-ki",
+        "description": "{m}hu-ban-nu-me-na-ki: Humban-numena"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={m}hu-ban-nu-me-na-ki&sense={m}hu-ban-nu-me-na-ki_s1",
+        "label": "Humban-numena"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "{m}hu-ban-nu-me-na-ki"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 47,
+          "end": 68
+        }
+      ]
+    },
+    "id": "#0e76ba69-a186-4c30-842a-27d41a5e4c29"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=su-un-ki-ik",
+        "label": "su-un-ki-ik",
+        "description": "su-un-ki-ik: König ich / to be king"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=su-un-ki-ik&sense=su-un-ki-ik_s1",
+        "label": "König ich / to be king"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "su-un-⸢ki⸣-ik"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 69,
+          "end": 82
+        }
+      ]
+    },
+    "id": "#1adec1a1-2863-4d16-8926-ad9fc40406ac"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=an-za-an",
+        "label": "an-za-an",
+        "description": "an-za-an: Anšan"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=an-za-an&sense=an-za-an_s1",
+        "label": "Anšan"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "an-za-an"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 83,
+          "end": 91
+        }
+      ]
+    },
+    "id": "#b2d37a1b-a4ae-46a9-9fd7-6f5296db7155"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=szu-szu-un-ka",
+        "label": "szu-szu-un-ka",
+        "description": "szu-szu-un-ka: Susa"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=szu-szu-un-ka&sense=szu-szu-un-ka_s1",
+        "label": "Susa"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "szu-szu-un-ka"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 95,
+          "end": 108
+        }
+      ]
+    },
+    "id": "#ae0471ba-7c12-4861-86d6-7bff89d8cd38"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=nu-ur",
+        "label": "nu-ur",
+        "description": "nu-ur: Licht / light"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=nu-ur&sense=nu-ur_s1",
+        "label": "Licht / light"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "nu-ur"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 109,
+          "end": 114
+        }
+      ]
+    },
+    "id": "#d4f7771c-e444-428f-953a-38787c20c7c4"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=kib-ra-at",
+        "label": "kib-ra-at",
+        "description": "kib-ra-at: Weltgegenden / (world) edges"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=kib-ra-at&sense=kib-ra-at_s1",
+        "label": "Weltgegenden / (world) edges"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "kib-ra-at"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 115,
+          "end": 124
+        }
+      ]
+    },
+    "id": "#6c47a6ba-ce09-4bd5-afd1-c4d84e869f87"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-szi-ih",
+        "label": "ku-szi-ih",
+        "description": "ku-szi-ih: ich baute, erbaute I built [construction (Q3875186)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3875186",
+        "label": "ich baute, erbaute I built [construction (Q3875186)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ku-szi-ih"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 125,
+          "end": 134
+        }
+      ]
+    },
+    "id": "#6ef85d6e-1018-44b6-908d-acfdb45e935c"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=dingir-gal",
+        "label": "dingir-gal",
+        "description": "dingir-gal: Napirisa [Napirisha (Q3335892)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3335892",
+        "label": "Napirisa [Napirisha (Q3335892)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "dingir-gal"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 135,
+          "end": 145
+        }
+      ]
+    },
+    "id": "#9e6ec0d6-ee53-4d9b-8bd0-9a33b1099511"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={d}in-szu-usz-na-ak",
+        "label": "{d}in-szu-usz-na-ak",
+        "description": "{d}in-szu-usz-na-ak: Insusinak [Inshushinak (Q2339416)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q2339416",
+        "label": "Insusinak [Inshushinak (Q2339416)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "{d}in-szu-usz-na-ak"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 146,
+          "end": 165
+        }
+      ]
+    },
+    "id": "#cf802cb8-b533-4e13-ba05-9773c334868c"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an",
+        "label": "si-ia-an",
+        "description": "si-ia-an: Tempel / temple"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an&sense=si-ia-an_s1",
+        "label": "Tempel / temple"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "si-ia-an"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 169,
+          "end": 177
+        }
+      ]
+    },
+    "id": "#5c4687c7-4f84-4c7d-95b1-8ad5912b7151"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-uk-ra",
+        "label": "ku-uk-ra",
+        "description": "ku-uk-ra: Schutz / to protect, guard"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-uk-ra&sense=ku-uk-ra_s1",
+        "label": "Schutz / to protect, guard"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ku-uk-ra"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 178,
+          "end": 186
+        }
+      ]
+    },
+    "id": "#4d25a6ab-f2d2-4e04-81f6-7fc3465ff67e"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=in",
+        "label": "in",
+        "description": "in: es, sie this [third person plural (Q51929447)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q51929447",
+        "label": "es, sie this [third person plural (Q51929447)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "in"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 187,
+          "end": 189
+        }
+      ]
+    },
+    "id": "#c6feec19-a79c-4b22-af24-e049e4d4de5a"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=du-ni-ih",
+        "label": "du-ni-ih",
+        "description": "du-ni-ih: ich gab, schenkte / I gave, donated"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=du-ni-ih&sense=du-ni-ih_s1",
+        "label": "ich gab, schenkte / I gave, donated"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "du-ni-ih"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 190,
+          "end": 198
+        }
+      ]
+    },
+    "id": "#d6ee0d22-1605-4fcb-9a6d-3f4defce5f44"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ta-ak-me",
+        "label": "ta-ak-me",
+        "description": "ta-ak-me: mein Leben life [life (Q3)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3",
+        "label": "mein Leben life [life (Q3)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ta-ak-me"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 199,
+          "end": 207
+        }
+      ]
+    },
+    "id": "#67626a7e-8289-4621-909b-f3bc9fcdd2b4"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=u2-me",
+        "label": "u2-me",
+        "description": "u2-me: mein my [self (Q3236990)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3236990",
+        "label": "mein my [self (Q3236990)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "u2-me"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 208,
+          "end": 213
+        }
+      ]
+    },
+    "id": "#83a034b1-313c-4619-afb6-57020a775487"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=tu4-ur",
+        "label": "tu4-ur",
+        "description": "tu4-ur: wegen, für, um / heart"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=tu4-ur&sense=tu4-ur_s1",
+        "label": "wegen, für, um / heart"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "tu4-ur"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 214,
+          "end": 220
+        }
+      ]
+    },
+    "id": "#10563490-44e5-4ddf-9256-9f53b420b54f"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=hi-ih",
+        "label": "hi-ih",
+        "description": "hi-ih: ich betete / qualifies tur"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=hi-ih&sense=hi-ih_s1",
+        "label": "ich betete / qualifies tur"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "hi-ih"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 221,
+          "end": 226
+        }
+      ]
+    },
+    "id": "#11fc40c5-6cc7-43eb-89ec-739457f7fc43"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-it-me",
+        "label": "si-it-me",
+        "description": "si-it-me: Gesundheit happiness [health (Q12147)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q12147",
+        "label": "Gesundheit happiness [health (Q12147)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "si-it-me"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 227,
+          "end": 235
+        }
+      ]
+    },
+    "id": "#b304ae27-f84e-4cc5-8820-949facc2466c"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=u2-me",
+        "label": "u2-me",
+        "description": "u2-me: mein my [self (Q3236990)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3236990",
+        "label": "mein my [self (Q3236990)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "u2-me"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 236,
+          "end": 241
+        }
+      ]
+    },
+    "id": "#0af3198b-1c77-4c5f-9835-75141620ba38"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=szu-ul-lu-me-ga",
+        "label": "szu-ul-lu-me-ga",
+        "description": "szu-ul-lu-me-ga: ich bin ein Erstrebender / to strive"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=szu-ul-lu-me-ga&sense=szu-ul-lu-me-ga_s1",
+        "label": "ich bin ein Erstrebender / to strive"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "szu-ul-lu-me-ga"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 245,
+          "end": 260
+        }
+      ]
+    },
+    "id": "#c5217380-e502-4d68-91d2-646750220fad"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=pi-el",
+        "label": "pi-el",
+        "description": "pi-el: Jahr year [year (Q577)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q577",
+        "label": "Jahr year [year (Q577)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "pi-el"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 261,
+          "end": 266
+        }
+      ]
+    },
+    "id": "#4c32e20f-9833-4aa1-82a0-b6fd62932bfe"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ki-it-ti-ma",
+        "label": "ki-it-ti-ma",
+        "description": "ki-it-ti-ma: Dauer length [duration (Q2199864)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q2199864",
+        "label": "Dauer length [duration (Q2199864)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ki-it-ti-ma"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 267,
+          "end": 278
+        }
+      ]
+    },
+    "id": "#a8290ea1-352e-4b47-b05f-41b56732b2d5"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=na",
+        "label": "na",
+        "description": "na: einer mit langen Tagen day [day (Q573)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q573",
+        "label": "einer mit langen Tagen day [day (Q573)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "na"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 279,
+          "end": 281
+        }
+      ]
+    },
+    "id": "#190ee827-7fc1-4551-bb32-e913d80ce50d"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=me-lu-uk-ra",
+        "label": "me-lu-uk-ra",
+        "description": "me-lu-uk-ra: einer mit langen Tagen / long"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=me-lu-uk-ra&sense=me-lu-uk-ra_s1",
+        "label": "einer mit langen Tagen / long"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "me-lu-uk-ra"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 282,
+          "end": 293
+        }
+      ]
+    },
+    "id": "#3945e7c0-d232-44c5-b9dd-917b25bd8b89"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=hi-en-ga",
+        "label": "hi-en-ga",
+        "description": "hi-en-ga: ich bin ein Erbittender / (so that) I will receive"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=hi-en-ga&sense=hi-en-ga_s1",
+        "label": "ich bin ein Erbittender / (so that) I will receive"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "hi-en-ga"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 294,
+          "end": 302
+        }
+      ]
+    },
+    "id": "#061481ca-c2f1-490e-a371-427def35be35"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=in",
+        "label": "in",
+        "description": "in: es, sie this [third person plural (Q51929447)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q51929447",
+        "label": "es, sie this [third person plural (Q51929447)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "in"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 306,
+          "end": 308
+        }
+      ]
+    },
+    "id": "#7bec4fb3-a9f1-42ea-82d6-af3cbb082a1a"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ti-ig-ga",
+        "label": "ti-ig-ga",
+        "description": "ti-ig-ga"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ti-ig-ga"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 309,
+          "end": 317
+        }
+      ]
+    },
+    "id": "#031d2de7-907a-4dff-95b2-16bee6449b27"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=a-gi",
+        "label": "a-gi",
+        "description": "a-gi: und"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=a-gi&sense=a-gi_s1",
+        "label": "und"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "a-gi"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 318,
+          "end": 322
+        }
+      ]
+    },
+    "id": "#57202998-4410-4aa3-85ca-070aa4ec1ea1"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=nu-ur",
+        "label": "nu-ur",
+        "description": "nu-ur: Licht / light"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=nu-ur&sense=nu-ur_s1",
+        "label": "Licht / light"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "nu-ur"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 323,
+          "end": 328
+        }
+      ]
+    },
+    "id": "#95cfb2a5-03a1-4b78-95a3-3abc355a57dc"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=kib-ra-at",
+        "label": "kib-ra-at",
+        "description": "kib-ra-at: Weltgegenden / (world) edges"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=kib-ra-at&sense=kib-ra-at_s1",
+        "label": "Weltgegenden / (world) edges"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "kib-ra-at"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 329,
+          "end": 338
+        }
+      ]
+    },
+    "id": "#6e7c1417-b799-4620-b3f1-130dd473c789"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-szi-ih",
+        "label": "ku-szi-ih",
+        "description": "ku-szi-ih: ich baute, erbaute I built [construction (Q3875186)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3875186",
+        "label": "ich baute, erbaute I built [construction (Q3875186)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ku-szi-ih"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 339,
+          "end": 348
+        }
+      ]
+    },
+    "id": "#b81ea065-05e1-4f26-92f2-32f19b459354"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=dingir-gal",
+        "label": "dingir-gal",
+        "description": "dingir-gal: Napirisa [Napirisha (Q3335892)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q3335892",
+        "label": "Napirisa [Napirisha (Q3335892)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "dingir-gal"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 349,
+          "end": 359
+        }
+      ]
+    },
+    "id": "#1027551f-d648-4360-bb84-652002968ad5"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight={d}in-szu-usz-na-ak",
+        "label": "{d}in-szu-usz-na-ak",
+        "description": "{d}in-szu-usz-na-ak: Insusinak [Inshushinak (Q2339416)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q2339416",
+        "label": "Insusinak [Inshushinak (Q2339416)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "{d}in-szu-usz-na-ak"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 360,
+          "end": 379
+        }
+      ]
+    },
+    "id": "#1148faf4-d7c2-43e0-afd8-30021b0340a2"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an",
+        "label": "si-ia-an",
+        "description": "si-ia-an: Tempel / temple"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an&sense=si-ia-an_s1",
+        "label": "Tempel / temple"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "si-ia-an"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 383,
+          "end": 391
+        }
+      ]
+    },
+    "id": "#bdb48ee4-2c89-43bf-84b8-e1b54cfea4ca"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-uk-ra",
+        "label": "ku-uk-ra",
+        "description": "ku-uk-ra: Schutz / to protect, guard"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-uk-ra&sense=ku-uk-ra_s1",
+        "label": "Schutz / to protect, guard"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ku-uk-ra"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 392,
+          "end": 400
+        }
+      ]
+    },
+    "id": "#b38cd8e1-2229-4e4d-a2b8-3f56582d52a3"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=in",
+        "label": "in",
+        "description": "in: es, sie this [third person plural (Q51929447)] "
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "http://www.wikidata.org/entity/Q51929447",
+        "label": "es, sie this [third person plural (Q51929447)] "
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "in"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 401,
+          "end": 403
+        }
+      ]
+    },
+    "id": "#81f2aba3-6029-48d8-adba-4d2ff8954d2c"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=du-ni-ih",
+        "label": "du-ni-ih",
+        "description": "du-ni-ih: ich gab, schenkte / I gave, donated"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=du-ni-ih&sense=du-ni-ih_s1",
+        "label": "ich gab, schenkte / I gave, donated"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "du-ni-ih"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 404,
+          "end": 412
+        }
+      ]
+    },
+    "id": "#e5a8d11c-906e-4a82-aad2-c7b0e5ed4b9e"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an",
+        "label": "si-ia-an",
+        "description": "si-ia-an: Tempel / temple"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=si-ia-an&sense=si-ia-an_s1",
+        "label": "Tempel / temple"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "si-ia-an"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 413,
+          "end": 421
+        }
+      ]
+    },
+    "id": "#633157c8-69fa-496b-913b-44c799b81c18"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ap-pa",
+        "label": "ap-pa",
+        "description": "ap-pa: was, das / that what/which, those who"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ap-pa&sense=ap-pa_s1",
+        "label": "was, das / that what/which, those who"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ap-pa"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 422,
+          "end": 427
+        }
+      ]
+    },
+    "id": "#23d80c3f-0570-46d5-a6f9-6505a22b924b"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-szi-ih-ma",
+        "label": "ku-szi-ih-ma",
+        "description": "ku-szi-ih-ma: in (dem Tempel den) ich baute / in (the temple which) I built"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=ku-szi-ih-ma&sense=ku-szi-ih-ma_s1",
+        "label": "in (dem Tempel den) ich baute / in (the temple which) I built"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "ku-szi-ih-ma"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 428,
+          "end": 440
+        }
+      ]
+    },
+    "id": "#9213e3ff-4efd-4a2b-8999-2e97eb48a8bb"
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "body": [
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=sza-tu4-uh-ni",
+        "label": "sza-tu4-uh-ni",
+        "description": "sza-tu4-uh-ni: ich will, möchte zelebrieren, als Priester tätig sein! / to be priestly"
+      },
+      {
+        "type": "SpecificResource",
+        "purpose": "classifying",
+        "source": "https://DigitalPasts.github.io/ALP-MEGA2024/lemmabase/?highlight=sza-tu4-uh-ni&sense=sza-tu4-uh-ni_s1",
+        "label": "ich will, möchte zelebrieren, als Priester tätig sein! / to be priestly"
+      }
+    ],
+    "target": {
+      "selector": [
+        {
+          "type": "TextQuoteSelector",
+          "exact": "sza-tu4-uh-ni"
+        },
+        {
+          "type": "TextPositionSelector",
+          "start": 441,
+          "end": 454
+        }
+      ]
+    },
+    "id": "#3372fbc9-2ede-4b9b-b18c-fe5feff5c222"
+  }
+]
