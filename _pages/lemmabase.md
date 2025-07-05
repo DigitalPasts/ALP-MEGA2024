@@ -1,0 +1,4 @@
+---
+layout: lemmabase
+permalink: /lemmabase/
+---

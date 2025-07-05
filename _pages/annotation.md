@@ -1,0 +1,4 @@
+---
+layout: annotation
+permalink: /annotation/
+---
