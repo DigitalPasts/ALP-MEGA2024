@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: "http://DigitalPasts.github.io/ALP-MEGA2024/" # the base hostname & protocol for your site
+url: "https://DigitalPasts.github.io/ALP-MEGA2024/" # the base hostname & protocol for your site
 
 
 # Build settings
