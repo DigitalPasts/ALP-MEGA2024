@@ -7,7 +7,7 @@ permalink: /about/
 Contributions to the digital version of the Lemmabase have been received by
 
 * Filippo Pedron
-* Katrien de Greaf
+* Katrien De Graef
 * Shai Gordin
 * Timo Homburg
 * Eric Whitacre
