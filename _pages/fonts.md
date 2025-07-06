@@ -5,7 +5,7 @@ permalink: /fonts/
 <h1 style="text-align:center">Fonts</h1>
 We create Fonts for different Elamite periods in order to support the Unicode represenation of Elamite fonts.
 
-We use images for which we have obtained a permission and create fonts using the Tool FontForge:
+We use images for which we have obtained a permission and create fonts using the Tool <a href="https://fontforge.org/en-US/" target="_blank">FontForge</a>:
 
 <img src="https://DigitalPasts.github.io/ALP-MEGA2024/img/fontforge_hallock.png"/>
 
