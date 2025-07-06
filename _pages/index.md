@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: defaultindex
 permalink: /
 ---
 <h3>Fonts</h3>
