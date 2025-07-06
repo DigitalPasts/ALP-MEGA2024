@@ -2,7 +2,7 @@
 layout: default
 permalink: /fonts/
 ---
-<h1 style="text-align:center">Fonts</h1>
+<h1>Fonts</h1>
 We create Fonts for different Elamite periods in order to support the Unicode represenation of Elamite fonts.
 
 We use images for which we have obtained a permission and create fonts using the Tool <a href="https://fontforge.org/en-US/" target="_blank">FontForge</a>:
