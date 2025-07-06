@@ -706,11 +706,11 @@ ElamiteSense.format = tag =>
         
 
     function loadRecogito(paraid){
-    if(typeof(r)!=='undefined'){
+    try{
         r.destroy()
-    }
-    if(typeof(r2)!=='undefined'){
         r2.destroy()
+    }catch(e){
+        console.log(e)
     }
     // Configuration options for the semantic tag widget
     var widgetConfig = {
