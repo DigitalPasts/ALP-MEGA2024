@@ -308,6 +308,12 @@ function saveTextAsFile(tosave,fileext,filename)
 
 
     function initializeText(data){
+    try{
+        r.destroy()
+        r2.destroy()
+    }catch(e){
+        console.log(e)
+    }
 $('#cdlitext').html(data.replaceAll("\n"," <br>").replaceAll("&nbsp;"," "))							
 $('#cdlitextcunei').html(data.replaceAll("\n"," <br>"))
 $('p').each(function() {
@@ -706,12 +712,7 @@ ElamiteSense.format = tag =>
         
 
     function loadRecogito(paraid){
-    /*try{
-        r.destroy()
-        r2.destroy()
-    }catch(e){
-        console.log(e)
-    }*/
+
     // Configuration options for the semantic tag widget
     var widgetConfig = {
         // List of data sources, strings for built-in connectors.
