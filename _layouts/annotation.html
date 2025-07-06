@@ -241,7 +241,11 @@ html, body {
         }
     var options=""
     for(val in elamtexts){
-    options+="<option value=\""+elamtexts[val]+"\">"+val+"</option>"
+        if(val.includes("_22")){
+            options+="<option selected=\"selected\" value=\""+elamtexts[val]+"\">"+val+"</option>"
+        }else{
+            options+="<option value=\""+elamtexts[val]+"\">"+val+"</option>"
+        } 
     }
     $('#selecttext').html(options)
     function updateFont(){
