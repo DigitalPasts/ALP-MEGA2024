@@ -15,10 +15,10 @@ title: Lemma Base Draft
 </style>
 <body>
     <h1 style="text-align:center">Lemma Base Draft</h1>
-<button id="loading" class="buttonload">
+<button id="loading" class="buttonload" style="text-align:center">
   <i class="fa fa-spinner fa-spin"></i>Loading Lemmabase...
 </button>
-    <table id="lemmabasedraft">
+    <table id="lemmabasedraft" style="visibility:hidden">
         <thead>
             <tr><th>Lemma</th><th>Word Type</th><th>Base</th><th>Classifier</th><th>Morphemes</th><th>Sense</th><th>Time Period</th><th>Loan Word</th><th>Reference</th></tr>
         </thead>
@@ -48,7 +48,6 @@ curlemma=""
 var ishighlightword=false
 var counter=0
 $(function() {
-$('#lemmabasedraft').hide()
 for(sense in senses){
     if(iseven){
         if(sense==highlightword){
