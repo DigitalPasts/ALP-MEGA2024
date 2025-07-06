@@ -4,11 +4,20 @@ title: Lemma Base Draft
 ---
 <script src="{{site.url}}js/data/senses.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.buttonload {
+  background-color: gray; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px /* Set a font size */
+}
+</style>
 <body>
     <h1 style="text-align:center">Lemma Base Draft</h1>
-<span id="loading">
+<button id="loading" class="buttonload">
   <i class="fa fa-spinner fa-spin"></i>Loading Lemmabase...
-</span>
+</button>
     <table id="lemmabasedraft">
         <thead>
             <tr><th>Lemma</th><th>Word Type</th><th>Base</th><th>Classifier</th><th>Morphemes</th><th>Sense</th><th>Time Period</th><th>Loan Word</th><th>Reference</th></tr>
@@ -39,6 +48,7 @@ curlemma=""
 var ishighlightword=false
 var counter=0
 $(function() {
+$('#lemmabasedraft').hide()
 for(sense in senses){
     if(iseven){
         if(sense==highlightword){
@@ -145,6 +155,7 @@ for(sense in senses){
 $('#lemmabasedraftbody').html(tabbody)
 var table=$('#lemmabasedraft').DataTable({responsive:true,lengthMenu: [[10, 25, 100,250,500,1000, -1], [10, 25, 100,250,500,1000, "All"]],paging:true,pagingType: "input"})
 $('#loading').hide()
+$('#lemmabasedraft').show()
 if(highlightword!=null){
    res=table.page.jumpToData(highlightword,0)
    console.log(res)
