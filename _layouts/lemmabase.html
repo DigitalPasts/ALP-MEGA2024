@@ -3,8 +3,12 @@ layout: default
 title: Lemma Base Draft
 ---
 <script src="{{site.url}}js/data/senses.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
     <h1 style="text-align:center">Lemma Base Draft</h1>
+<span id="loading">
+  <i class="fa fa-spinner fa-spin"></i>Loading Lemmabase...
+</span>
     <table id="lemmabasedraft">
         <thead>
             <tr><th>Lemma</th><th>Word Type</th><th>Base</th><th>Classifier</th><th>Morphemes</th><th>Sense</th><th>Time Period</th><th>Loan Word</th><th>Reference</th></tr>
@@ -34,6 +38,7 @@ iseven=true
 curlemma=""
 var ishighlightword=false
 var counter=0
+$(function() {
 for(sense in senses){
     if(iseven){
         if(sense==highlightword){
@@ -139,10 +144,12 @@ for(sense in senses){
 }
 $('#lemmabasedraftbody').html(tabbody)
 var table=$('#lemmabasedraft').DataTable({responsive:true,lengthMenu: [[10, 25, 100,250,500,1000, -1], [10, 25, 100,250,500,1000, "All"]],paging:true,pagingType: "input"})
+$('#loading').hide()
 if(highlightword!=null){
    res=table.page.jumpToData(highlightword,0)
    console.log(res)
    //table.fnPageChange(pageNo-1)//.draw('page');
 }
+});
 </script>
 </html>
